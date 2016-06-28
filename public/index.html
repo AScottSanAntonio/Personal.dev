@@ -2,8 +2,95 @@
 <html>
 <head>
 	<title>Peronsal</title>
-</head>
-<body>
+	
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/index.css">
+	</head>
+	
 
+		<body>
+		<div id ="backgroundstage">
+		<div id ="sideleft">
+			<div id = "heading">
+				<h1>Work and Information<br>Alex Scott</h1>
+			</div>
+			<div id = "background">
+				<button id="btn1">Projects</button><br>
+			</div>
+			
+
+			<div id ="exercisebox">
+				<h1>Projects: </h1><br>
+				<a href="testsimon.html">Simple Simon</a><br>
+				<a href="weathermap.html">Weather Map</a><br>
+				<a href="calc.html">Calculator</a>
+			</div>
+			<div id="socialmedia">
+			<ul>Social Media
+				<li><a href="https://www.facebook.com/profile.php?id=100010818873627">Facebook</a></li>
+				<li>Twitter</li>
+				<li>Linkedin</li>
+			</ul>
+			</div>
+			<div id = "background2">
+				<button id="btn2">Information</button><br>
+			</div>
+
+
+			<div id = "background3">
+				<h1>Information: </h1><br>
+				<a href="resume.html">Resume</a><br>
+			</div>
+		</div>
+		<div id ="centertext">
+		<p>
+		</p>
+		</div>
+		<div id="cats">
+		.
+		</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+        	"use strict";
+        	$( "#btn1" ).click( function() {
+        		
+                $( "#exercisebox" ).animate({
+                    left: "0px",
+                    
+                    
+
+                }, 300);
+                $( "#exercisebox").toggle(200);
+            });
+                
+                $(document).ready(function() {
+                $( "#btn2" ).click( function() {
+        		
+                $( "#background3" ).animate({
+                    left: "px",
+
+                    
+                }, 300);
+                $( "#background3").toggle(200);
+
+
+            });
+        	});
+                				$( "#cats" ).hover(function() {
+  				$("#backgroundstage").css("background-image", "url(css/img/cat.gif");
+				}, function() {
+					$("#backgroundstage").css("background-image", "url(css/img/sand.jpg", "background-size", "cover");
+				});
+        });
+        
+
+
+
+
+
+
+</script>
 </body>
 </html>

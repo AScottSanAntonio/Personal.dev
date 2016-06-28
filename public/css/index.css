@@ -1,0 +1,136 @@
+#cats {
+width: 1px;
+height: 1px;
+border: 2px solid white;
+border-radius: 2;
+}
+
+#centertext {
+	width: 450px;
+	height: 100px;
+	background-color: #DCDCDC;
+	border: 2px solid white;
+	margin: 5px;
+	opacity: .3;
+	z-index: 0;
+	
+	position: absolute;
+	left: 350px;
+	top: 120px;
+}
+
+#sideleft {
+	width: 250px;
+	height: 620px;
+	background-color: #DCDCDC;
+	border: 2px solid white;
+	margin: 5px;
+	opacity: .6;
+	z-index: 0;
+}
+
+#socialmedia {
+	text-align: left;
+	width: 150px;
+	height: 100px;
+	left: 50%;
+	padding: 5px;
+	margin: 5px;
+	background-color: grey;
+	border: 2px solid white;
+	opacity: .5;
+	clear: left
+
+}
+ul {
+	text-align: left;
+	color: ghostwhite;
+}
+
+#heading {
+	text-align: center;
+	width: 20em
+	height: 10em;
+	background-color: grey;
+	opacity: .5;
+	border: 2px solid white;
+	padding: 5px;
+	margin: 5px;
+	position: absolute;
+	left: 32em;
+}
+
+#backgroundstage {
+	background-image: url("img/sand.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	
+	
+}
+#background {
+	height: 40px;
+	width: 90px;
+	background-color: grey;
+	opacity: .5;
+	margin: 5px;
+	border: 2px solid white;
+	padding: 5px;
+	z-index: 1;
+
+
+}
+
+a {
+	color: ghostwhite;
+	opacity: 1;
+	text-decoration: underline;
+	text-align: center;
+}
+#btn1 {
+	
+}
+
+#background2 {
+	height: 40px;
+	width: 102px;
+	background-color: grey;
+	opacity: .5;
+	margin: 5px;
+	border: 2px solid white;
+	padding: 5px;
+	z-index: 1;
+}
+
+#background3 {
+	height: 200px;
+	width: 200px;
+	background-color: grey;
+	opacity: .7;
+	margin: 5px;
+	border: 2px solid white;
+	padding: 5px;
+	z-index: 2;
+	position: relative;
+
+
+}
+
+#exercisebox {
+	height: 200px;
+	width: 200px;
+	background-color: grey;
+	opacity: .7;
+	margin: 5px;
+	border: 2px solid white;
+	padding: 5px;
+	z-index: 2;
+	position: relative;
+	top: 0em;
+
+}
+h1 {
+	font-size: 24px;
+	color: white;
+	text-decoration: underline;
+}

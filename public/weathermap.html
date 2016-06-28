@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title></title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src ="js/moment.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<style>
+	#map {
+			height: 650px;
+			width: 650px;
+			float: right;
+			margin: 40px;
+			border: 3px solid black;
+		}
+		h1 {
+			color: black;
+			z-index: 2;
+		}
+		body {
+			background-image: url("css/img/serious.gif");
+			background-size: 10em;
+			background-repeat: repeat;
+			background-attachment: fixed;
+		}
+		#day1{
+			height: 100px;
+			width: 120px;
+			margin: 10px;
+			color: black;
+			background-color: #CCCCCC;
+			background-size: cover;
+			float: left;
+			border: 2px solid black;
+			position: absolute;
+			top: 40px;
+			left: 5px;
+			z-index: 2;
+		}
+		#day2{
+			height: 100px;
+			width: 120px;
+			margin: 10px;
+			color: black;
+			background-color: #CCCCCC;
+			background-size: cover;
+			float: left;
+			border: 2px solid black;
+			position: absolute;
+			top: 40px;
+			left: 130px;
+			z-index: 2;
+		}
+		#day3{
+			height: 100px;
+			width: 120px;
+			margin: 10px;
+			color: black;
+			background-color: #CCCCCC;
+			background-size: cover;
+			float: left;
+			border: 2px solid black;
+			position: absolute;
+			top: 40px;
+			left: 255px;
+			z-index: 2;
+		}
+		#container {
+			width: 405px;
+			height: 170px;
+			border: 3px solid black;
+			background-color: #00819C;
+			background-size: cover;
+			position: absolute;	
+			top: 40px;
+			left: 40px;
+			z-index: 2;
+		}
+		#heading {
+			font-size: 20px;
+			text-align: center;
+		}
+		div {
+			font-weight: bold;
+		}
+		#container2 {
+			width: 100px;
+			height: 100px;
+			border: 3px solid black;
+			background-color: #00819C;
+			background-size: cover;
+			position: absolute;	
+			top: 15px;
+			left: 40px;
+			z-index: 1;
+			padding: 2px;
+		}
+		a {
+			color: black;
+		}
+		</style>
+	</head>	
+
+	<body>
+	<div id="container">
+		<h1 id ="heading">3 Day Forecast</h1><br>
+		<div id ="day1"></div>
+		<div id ="day2"></div>
+		<div id ="day3"></div>
+
+	</div>
+	<div id ="container2">
+	<a href="index.html">Main Page</a><br>
+	</div>
+	<div id ="mapborder">
+		<div id="map"></div>
+	</div>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVibIrK6gT5L_yYb1V_87jfIaDrTBDfig">
+	</script>
+	<script type="text/javascript"></script>
+	<script>
+	(function() {
+        "use strict";
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 9,
+
+            // This sets the center of the map at our location
+            center: {
+                lat:  29.481137,
+                lng: -98.7945945
+            }
+        };
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var geocoder = new google.maps.Geocoder();
+        var address = "600 Navarro St #350, San Antonio, TX 78205";
+
+        geocoder.geocode({ "address": address }, function(results, status) {
+
+   			// Check for a successful result
+   			if (status == google.maps.GeocoderStatus.OK) {
+
+
+       			// Recenter the map over the address
+       			map.setCenter(results[0].geometry.location);
+   			} else {
+
+
+       			// Show an error message with the status if our request fails
+       			alert("Geocoding was not successful - STATUS: " + status);
+    		}
+
+
+		});
+       	var san = { lat: 29.481137, lng: -98.7945945 };
+
+		// Add the marker to our existing map
+    	var cloud = "/css/img/cloud-icon.png";
+		var marker = new google.maps.Marker({
+    		position: san,
+    		map: map,
+    		draggable: true
+      	});
+      	marker.addListener("dragend", function(){
+      		updateWeather();
+      	})
+
+		
+      	function updateWeather(){
+	   		$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+    				APPID: "1ae910b78ef373978aa1e3d0612ab2d0",
+    				lat: marker.position.lat(),
+    				lon: marker.position.lng(),
+    				units: "imperial",
+    				cnt: "3"
+    		}).done(function(weatherData) {
+    				console.log(weatherData);
+    				var cityName = document.getElementById("heading")
+
+    				cityName.innerHTML = weatherData.city.name + " - three day forecast"
+
+    				$("#day1").html(moment(weatherData.list[0].dt * 1000).format('MMMM Do YYYY')  + " " + weatherData.list[0].temp.max + '° high <br> ' + weatherData.list[0].temp.min + '° low <br> ' + weatherData.list[0].speed + ' mph <br> ' + weatherData.list[0].humidity + '% humidity');
+    				$("#day2").html((moment(weatherData.list[1].dt * 1000).format('MMMM Do YYYY')) + " " + weatherData.list[1].temp.max + '° high <br> ' + weatherData.list[1].temp.min + '° low <br> ' + weatherData.list[1].speed + ' mph <br> ' + weatherData.list[1].humidity + '% humidity')
+    				$("#day3").html((moment(weatherData.list[2].dt * 1000).format('MMMM Do YYYY')) + " " + weatherData.list[2].temp.max + '° high <br> ' + weatherData.list[2].temp.min + '° low <br> ' + weatherData.list[2].speed + ' mph <br> ' + weatherData.list[2].humidity + '% humidity')
+    		});
+    	};
+    	updateWeather();
+	})();			
+		
+
+		</script>
+	</body>
+</html>

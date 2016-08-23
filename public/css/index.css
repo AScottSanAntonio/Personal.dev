@@ -1,136 +1,288 @@
-#cats {
+@font-face 
+{
+    font-family: 'YourFontName'; 
+    src: url('http://domain.com/fonts/font.ttf'); 
+}
+#stories2
+{
+	height: 370px;
+	width: 400px;
+	background-color: #545454;
+	border: 3px solid white;
+	opacity: .7;
+	border-radius: 20deg;
+	margin: 10px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	border-style: groove;
+	font-family: 'Shadows Into Light', cursive;
+}
+#heading1
+{
+	position: absolute;
+	top: 30px;
+	left: 90px;
+	text-align: center;
+	width: 300px;
+	height: 40px;
+	background-color: #3F3F3F;
+	opacity: .7;
+	border-radius: 20deg;
+	border: 2px solid white;
+	border-style: groove;
+	font-family: 'Shadows Into Light', cursive;
+
+}
+.socialmedia
+{
+	float: left;
+	position: absolute;
+	top: 115px;
+	left: 245px;
+	font-family: 'Shadows Into Light', cursive;
+}
+#exercisebox
+{
+	position: absolute;
+	left: 140px;
+	top: 155px;
+	width: 227px;
+	height: 180px;
+	background-color: #3F3F3F;
+	border: 1px solid white;
+	padding: 5px;
+	opacity: .8;
+	border-radius: 20deg;
+	border-style: groove;
+	font-family: 'Shadows Into Light', cursive;
+}
+#projects
+{
+	font-size: 16px;
+	color: white;
+	background-color: grey;
+	opacity: .7;
+	border-radius: 20deg;
+	border: 1px solid white;
+	margin: 10px;
+	top: 105px;
+	position: absolute;
+	left: 130px;
+	font-family: 'Shadows Into Light', cursive;
+}
+#stories
+{
+	height: 370px;
+	width: 400px;
+	background-color: #3F3F3F;
+	border: 3px solid white;
+	opacity: .7;
+	border-radius: 20deg;
+	margin: 10px;
+	position: absolute;
+	left: 450px;
+	border-style: groove;
+	font-family: 'Shadows Into Light', cursive;
+}
+#project
+{
+	font-size: 16px;
+	color: white;
+	background-color: grey;
+	opacity: .7;
+	border-radius: 20deg;
+	border: 1px solid white;
+	margin: 3px;
+	font-family: 'Shadows Into Light', cursive;
+}
+#newsheading1
+{
+	font-size: 16px;
+	color: white;
+	background-color: grey;
+	opacity: .7;
+	border-radius: 20deg;
+	border: 1px solid white;
+	margin: 5px;
+	font-family: 'Shadows Into Light', cursive;
+}
+#newsheading2
+{
+	font-size: 16px;
+	color: white;
+	background-color: grey;
+	opacity: .7;
+	border-radius: 20deg;
+	border: 1px solid white;
+	margin: 5px;
+	font-family: 'Shadows Into Light', cursive;
+}
+#newsheading3
+{
+	font-size: 16px;
+	color: white;
+	background-color: grey;
+	opacity: .7;
+	border-radius: 20deg;
+	border: 1px solid white;
+	margin: 5px;
+	font-family: 'Shadows Into Light', cursive;
+}
+#bottomtext
+{
+	height: 60px;
+	width: 60%;
+	background-color: grey;
+	border: 1px solid white;
+	opacity: .7;
+	border-radius: 20deg;
+	margin: 10px;
+}
+#topheading
+{
+	text-align: center;
+	height: 60px;
+	width: 180px;
+	background-color: grey;
+	border: 1px solid white;
+	opacity: .7;
+	border-radius: 20deg;
+	margin-left: 27%;
+	color: white;
+
+}
+
+#cats 
+{
 width: 1px;
 height: 1px;
 border: 2px solid white;
 border-radius: 2;
 }
 
-#centertext {
+#centertext 
+{
 	width: 450px;
 	height: 100px;
 	background-color: #DCDCDC;
 	border: 2px solid white;
 	margin: 5px;
 	opacity: .3;
+	border-radius: 20deg;
 	z-index: 0;
-	
 	position: absolute;
 	left: 350px;
 	top: 120px;
 }
 
-#sideleft {
-	width: 250px;
-	height: 620px;
-	background-color: #DCDCDC;
-	border: 2px solid white;
-	margin: 5px;
-	opacity: .6;
-	z-index: 0;
-}
 
-#socialmedia {
-	text-align: left;
-	width: 150px;
-	height: 100px;
-	left: 50%;
-	padding: 5px;
-	margin: 5px;
-	background-color: grey;
-	border: 2px solid white;
-	opacity: .5;
-	clear: left
-
-}
-ul {
-	text-align: left;
-	color: ghostwhite;
-}
-
-#heading {
+#heading 
+{
 	text-align: center;
 	width: 20em
 	height: 10em;
 	background-color: grey;
 	opacity: .5;
+	border-radius: 20deg;
 	border: 2px solid white;
 	padding: 5px;
 	margin: 5px;
 	position: absolute;
 	left: 32em;
 }
+body 
+{
+	background-image: url("img/background.jpg");
+	background-attachment: local;
+	background-size: 1400px;
+	width: 1280px;
+	
 
-#backgroundstage {
-	background-image: url("img/sand.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	
-	
 }
-#background {
+#background 
+{
 	height: 40px;
 	width: 90px;
 	background-color: grey;
 	opacity: .5;
+	border-radius: 20deg;
 	margin: 5px;
 	border: 2px solid white;
 	padding: 5px;
 	z-index: 1;
-
-
+	border-radius: 20deg;
+	font-family: 'Shadows Into Light', cursive;
 }
-
-a {
+a 
+{
 	color: ghostwhite;
 	opacity: 1;
-	text-decoration: underline;
+
+border-radius: 20deg;	text-decoration: underline;
 	text-align: center;
 }
-#btn1 {
-	
+#btn2
+{
+	font-size: 16px;
+	color: white;
+	background-color: grey;
+	opacity: .7;
+	border-radius: 20deg;
+	border: 1px solid white;
+	margin: 10px;
+	position: absolute;
+	top: 105px;
+	font-family: 'Shadows Into Light', cursive;
 }
-
-#background2 {
+#btn1 
+{
+	font-size: 16px;
+	color: white;
+	background-color: grey;
+	opacity: .7;
+	border-radius: 20deg;
+	border: 1px solid white;
+	margin: 10px;
+	font-family: 'Shadows Into Light', cursive;
+}
+#background2 
+{
 	height: 40px;
 	width: 102px;
 	background-color: grey;
 	opacity: .5;
+	border-radius: 20deg;
 	margin: 5px;
 	border: 2px solid white;
 	padding: 5px;
 	z-index: 1;
+	margin: 10px;
+	border-radius: 20deg;
+	font-family: 'Shadows Into Light', cursive;
 }
-
 #background3 {
-	height: 200px;
-	width: 200px;
+	height: 50px;
+	width:92px;
 	background-color: grey;
 	opacity: .7;
+	border-radius: 20deg;
 	margin: 5px;
 	border: 2px solid white;
 	padding: 5px;
 	z-index: 2;
-	position: relative;
-
-
+	position: absolute;
+	margin: 10px;
+	border-radius: 20deg;
+	top: 145px;
+	font-family: 'Shadows Into Light', cursive;
 }
 
-#exercisebox {
-	height: 200px;
-	width: 200px;
-	background-color: grey;
-	opacity: .7;
-	margin: 5px;
-	border: 2px solid white;
-	padding: 5px;
-	z-index: 2;
-	position: relative;
-	top: 0em;
-
-}
-h1 {
+h1 
+{
 	font-size: 24px;
 	color: white;
 	text-decoration: underline;
+	margin: 10px;
+	border-radius: 20deg;
 }

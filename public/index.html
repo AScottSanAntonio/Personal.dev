@@ -2,88 +2,172 @@
 <html>
 <head>
 	<title>Peronsal</title>
-	
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/index.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 	</head>
-	
-
 		<body>
-		<div id ="backgroundstage">
-		<div id ="sideleft">
-			<div id = "heading">
-				<h1>Work and Information<br>Alex Scott</h1>
-			</div>
-			<div id = "background">
-				<button id="btn1">Projects</button><br>
-			</div>
-			
 
-			<div id ="exercisebox">
-				<h1>Projects: </h1><br>
-				<a href="testsimon.html">Simple Simon</a><br>
-				<a href="weathermap.html">Weather Map</a><br>
-				<a href="calc.html">Calculator</a>
-			</div>
-			<div id="socialmedia">
-			<ul>Social Media
-				<li><a href="https://www.facebook.com/profile.php?id=100010818873627">Facebook</a></li>
-				<li>Twitter</li>
-				<li>Linkedin</li>
+			<div id = "stories">
+			<h1 id = "topheading">Top Stories: Entertainment</h1>
+			<h2 id = "newsheading1" class = "btn btn-default"><a href="http://www.polygon.com/">Polygon</a></h2>
+			<ul id="webTicker1">
+    			<li id = "news"></li>
+			</ul>
+				<br>
+			<h2 id = "newsheading2" class = "btn btn-default"><a href="http://www.ign.com/">IGN</a></h2>
+			<ul id="webTicker2">
+    			<li id = "news2"></li>
+			</ul>
+				<br>
+			<h2 id = "newsheading3" class = "btn btn-default"><a href="http://www.reddit.com/">Reddit</a></h2>
+			<ul id="webTicker3">
+    			<li id = "news3"></li>
 			</ul>
 			</div>
-			<div id = "background2">
-				<button id="btn2">Information</button><br>
+
+
+			<div id = "stories2">
+			<h1 id = "topheading">Top Stories:<br> News</h1>
+			<h2 id = "newsheading1" class = "btn btn-default"><a href="http://www.wsj.com/">Wall Street Journal</a></h2>
+			<ul id="webTicker4">
+    			<li id = "news4"></li>
+			</ul>
+				<br>
+			<h2 id = "newsheading2" class = "btn btn-default"><a href="http://www.nytimes.com/">New York Times</a></h2>
+			<ul id="webTicker5">
+    			<li id = "news5"></li>
+			</ul>
+				<br>
+			<h2 id = "newsheading3" class = "btn btn-default"><a href="http://time.com/">Time</a></h2>
+			<ul id="webTicker6">
+    			<li id = "news6"></li>
+			</ul>
 			</div>
 
 
+				<br>
+		<div id ="backgroundstage">
+		<div id="projects" class = "btn btn-default">Projects
+			</div>
+			<div id ="exercisebox">
+				
+				<a id = "project" class = "btn btn-default"href="testsimon.html">Simple Simon</a><br>
+
+				<a id = "project" class = "btn btn-default" href="weathermap.html">Weather Map</a><br>
+
+				<a id = "project" class = "btn btn-default"href="calc.html">Calculator</a><br>
+
+				<a id = "project" class = "btn btn-default"href="test1.php">DnD Character Generator</a><br>
+			</div>
+			<div class = "socialmedia" >
+				<a href="https://www.facebook.com/profile.php?id=100010818873627" class = "btn btn-default">Facebook</a></li>
+				<a href="https://www.linkedin.com/in/alexwscott1993?trk=hp-identity-name" class = "btn btn-default">Linkedin</a>
+				<a href = "https://github.com/AScottSanAntonio" class = "btn btn-default">GitHub</a>
+			</div>
+			<br>
+			<h1 id = "heading1">Welcome to the Wall</h1>
+			
+
+
+			<div id="btn2" class = "btn btn-default">Information</button>
+			</div>
+				<br>
 			<div id = "background3">
-				<h1>Information: </h1><br>
-				<a href="resume.html">Resume</a><br>
+				<a class = "btn btn-default" href="resume.html">Resume</a><br>
 			</div>
-		</div>
-		<div id ="centertext">
-		<p>
-		</p>
-		</div>
-		<div id="cats">
-		.
-		</div>
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+				<br>
+			
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="js/jquery.webticker.min.js"></script>
 		<script>
+			$.ajax("https://newsapi.org/v1/articles?source=polygon&apiKey=3228357fc3674d43945b6850a353599f").done(function(articles) {
+				var table = "";
+				console.log(articles.articles);
+				articles.articles.forEach(function(news){
+				table += "<a class = 'btn btn-default' href = '" + news.url + "'>" + news.title + "</a>"
+				});
+				$('#news').html(table);
+			})
+
+			$.ajax("https://newsapi.org/v1/articles?source=ign&apiKey=3228357fc3674d43945b6850a353599f").done(function(articles2) {
+				var table = "";
+				console.log(articles2.articles);
+				articles2.articles.forEach(function(news2){
+				table += "<a class = 'btn btn-default' href = '" + news2.url + "'>" + news2.title + "</a>"
+				});
+				$('#news2').html(table);
+			})
+			$.ajax("https://newsapi.org/v1/articles?source=reddit-r-all&apiKey=3228357fc3674d43945b6850a353599f").done(function(articles3) {
+				var table = "";
+				console.log(articles3.articles);
+				articles3.articles.forEach(function(news3){
+				table += "<a class = 'btn btn-default' href = '" + news3.url + "'>" + news3.title + "</a>"
+				});
+				$('#news3').html(table);
+			$.ajax("https://newsapi.org/v1/articles?source=the-wall-street-journal&apiKey=3228357fc3674d43945b6850a353599f").done(function(articles4) {
+				var table = "";
+				console.log(articles4.articles);
+				articles4.articles.forEach(function(news4){
+				table += "<a class = 'btn btn-default' href = '" + news4.url + "'>" + news4.title + "</a>"
+				});
+				$('#news4').html(table);
+			})
+
+			$.ajax("https://newsapi.org/v1/articles?source=the-new-york-times&apiKey=3228357fc3674d43945b6850a353599f").done(function(articles5) {
+				var table = "";
+				console.log(articles5.articles);
+				articles5.articles.forEach(function(news5){
+				table += "<a class = 'btn btn-default' href = '" + news5.url + "'>" + news5.title + "</a>"
+				});
+				$('#news5').html(table);
+			})
+			$.ajax("https://newsapi.org/v1/articles?source=time&apiKey=3228357fc3674d43945b6850a353599f").done(function(articles6) {
+				var table = "";
+				console.log(articles6.articles);
+				articles6.articles.forEach(function(news6){
+				table += "<a class = 'btn btn-default' href = '" + news6.url + "'>" + news6.title + "</a>"
+				});
+				$('#news6').html(table);
+
+			})
 			$(document).ready(function() {
         	"use strict";
-        	$( "#btn1" ).click( function() {
-        		
-                $( "#exercisebox" ).animate({
-                    left: "0px",
-                    
-                    
-
-                }, 300);
-                $( "#exercisebox").toggle(200);
+        		$( "#projects" ).click( function() {
+        		$( "#exercisebox" ).slideToggle("slow");
             });
-                
                 $(document).ready(function() {
                 $( "#btn2" ).click( function() {
-        		
-                $( "#background3" ).animate({
-                    left: "px",
+        		$( "#background3" ).slideToggle("slow");
+			});
+                $('#webTicker1').webTicker({
+                	duplicate:true
+                });
+                $('#webTicker2').webTicker({
+                	duplicate:true
 
-                    
-                }, 300);
-                $( "#background3").toggle(200);
+                });
+                $('#webTicker3').webTicker({
+                	duplicate:true
 
+                });
+                $('#webTicker4').webTicker({
+                	duplicate:true
+                });
+                $('#webTicker5').webTicker({
+                	duplicate:true
 
-            });
+                });
+                $('#webTicker6').webTicker({
+                	duplicate:true
+
+                });
+                
         	});
-                				$( "#cats" ).hover(function() {
-  				$("#backgroundstage").css("background-image", "url(css/img/cat.gif");
-				}, function() {
-					$("#backgroundstage").css("background-image", "url(css/img/sand.jpg", "background-size", "cover");
-				});
+               
         });
+	});
         
 
 

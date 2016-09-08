@@ -170,10 +170,10 @@
 		</script>
 		<script type="text/javascript">
 			(function(){
-				$.getJSON("https://api.github.com/users/AScottSanAntonio/repos?access_token=6d33c4d43f46aad687b47aa22fc1465f77585d21", function(data) {
+				$.getJSON("https://api.github.com/users/AScottSanAntonio/repos?access_token=4de62f457bb8f0da5e7705db16f692a0ede35824", function(data) {
 				}).done(function(data) {
 					data.forEach(function(repository) {
-						$.getJSON("https://api.github.com/repos/AScottSanAntonio/" + repository.name + "/commits?access_token=6d33c4d43f46aad687b47aa22fc1465f77585d21",
+						$.getJSON("https://api.github.com/repos/AScottSanAntonio/" + repository.name + "/commits?access_token=4de62f457bb8f0da5e7705db16f692a0ede35824",
 // replace with OAUTH BEFORE GITHUB
 function(commits) {
 	var commitsString = '<div role="tabpanel" class="tab-pane fade" id="repository-' + repository.id + '">';

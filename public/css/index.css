@@ -215,6 +215,7 @@ a
 	border-radius: 20deg;	
 	text-decoration: underline;
 	text-align: center;
+	font-family: 'Shadows Into Light', cursive;
 }
 #btn2
 {
@@ -223,9 +224,9 @@ a
 	background-color: #3F3F3F;
 	border-radius: 20deg;
 	border: 1px solid white;
-	margin: 10px;
+	margin: 20px;
 	position: absolute;
-	top: 105px;
+	top: 95px;
 	font-family: 'Shadows Into Light', cursive;
 }
 #btn1 
@@ -244,10 +245,8 @@ a
 	background-color: #3F3F3F;
 	border: 2px solid white;
 	padding: 5px;
-	z-index: 2;
 	position: absolute;
-	margin: 10px;
-	border-radius: 20deg;
-	top: 145px;
+	margin: 20px;
+	top: 135px;
 	font-family: 'Shadows Into Light', cursive;
 }

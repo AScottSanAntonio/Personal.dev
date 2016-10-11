@@ -1,3 +1,58 @@
+#elontext
+{
+	color: black;
+	z-index: 3;
+	position: relative;
+	top: 690px;
+	left: 700px;
+	height: 40px; 
+	width: 160px;
+	font-size: 20px;
+	 
+	
+}
+#elon
+{
+	position: relative;
+	top: 540px;
+	left: 670px;
+	border-radius: 20px;
+	z-index: 1;
+}
+#contact
+{
+	position: relative;
+	width: 200px;
+	height: 40px;
+	top: 10px;
+	left: 240px;
+	font-size: 20px;
+	color: white;
+	background-color: #3F3F3F;
+	margin: 10px;
+	font-family: 'Shadows Into Light', cursive
+}
+#resume
+{
+	position: relative;
+	width: 80px;
+	height: 40px;
+	top: 10px;
+	left: 220px;
+	font-size: 20px;
+	color: white;
+	background-color: #3F3F3F;
+	margin: 10px;
+	font-family: 'Shadows Into Light', cursive;
+}
+#portrait
+{
+	border-radius: 160px;
+	position: absolute;
+	left: 600px;
+	top: 30px;
+	border: 5px solid #6A6A6A;
+}
 #storyborder
 {
 	background-color: #404040;
@@ -11,7 +66,7 @@
 #infobottom
 {
 	background-color: #6A6A6A;
-	height: 80px;
+	height: 120px;
 	width: 715px;
 	position: absolute;
 	top: 960px;
@@ -19,12 +74,15 @@
 }
 #infosection
 {
-	background-color: #6A6A6A;
-	height: 800px;
+	border-radius: 10px;
+	padding: 5px;
+	border: 5px solid #6A6A6A;
+	height: 360px;
 	width: 480px;
 	position: absolute;
-	top: 130px;
+	top: 200px;
 	left: 670px;
+	color: white;
 }
 #infobar
 {
@@ -52,13 +110,9 @@
 }
 #githeading
 {
-	opacity: .7;
 	width: 300px;
 	height: 40px;
-	background-color: grey;
 	border-radius: 20deg;
-	border: 2px solid white;
-	border-style: groove;
 	font-family: 'Shadows Into Light', cursive;
 	color: white;
 }
@@ -70,9 +124,6 @@
 	background-color: #2B2B2B;
 	width: 540px;
 	margin: 10px;
-	border: 2px solid white;
-	border-style: groove;
-	opacity: .8;
 	padding: 5px;
 }
 .socialmedia
@@ -88,12 +139,11 @@
 	display: none;
 	border-radius: 30deg;
 	position: absolute;
-	left: 14px;
+	left: 6px;
 	top: 80px;
 	width: 227px;
 	height: 224px;
 	background-color: #3F3F3F;
-	border: 1px solid white;
 	padding: 5px;
 	font-family: 'Shadows Into Light', cursive;
 }
@@ -102,12 +152,10 @@
 	font-size: 16px;
 	color: white;
 	background-color: #3F3F3F;
-	border-radius: 20deg;
-	border: 1px solid white;
 	margin: 10px;
 	top: 10px;
 	position: absolute;
-	left: 10px;
+	left: 0px;
 	font-family: 'Shadows Into Light', cursive;
 }
 #stories
@@ -115,11 +163,9 @@
 	height: 390px;
 	width: 300px;
 	background-color: #3F3F3F;
-	border: 3px solid white;
 	border-radius: 20deg;
 	margin: 10px;
 	position: absolute;
-	border-style: groove;
 	font-family: 'Shadows Into Light', cursive;
 	top: -10px;
 }
@@ -129,7 +175,6 @@
 	color: white;
 	background-color: #3F3F3F;
 	border-radius: 20deg;
-	border: 1px solid white;
 	margin: 3px;
 	font-family: 'Shadows Into Light', cursive;
 }
@@ -169,13 +214,12 @@
 #topheading
 {
 	position: relative;
-	top: -15px;
+	top: -20px;
 	left: -74px;
 	text-align: center;
 	height: 80px;
-	width: 200px;
-	background-color: grey;
-	border: 1px solid white;
+	width: 285px;
+	background-color: #6A6A6A;
 	border-radius: 20deg;
 	margin-left: 27%;
 	color: white;

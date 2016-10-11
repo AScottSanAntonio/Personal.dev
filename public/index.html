@@ -2,12 +2,28 @@
 <html>
 <head>
 	<div id = "infobar">
-
+	<a id = "resume" class = "btn btn-default" href="resumepdf.pdf">Résumé</a>
+	<address class = "btn btn-default" id = "contact">
+	Email Contact: <a href="mailto:runhearn@gmail.com">Alex Scott</a><br>
+	</address> 
 	</div>
+	<img src = "css/img/headshot.jpg" id = "portrait" height = "160" width = "160">
 	<br>
 	<div id ="infosection">
-
+	<p> I am a Front End Web Developer based in San Antonio- recent graduate of Codeup's Full Stack Program.  I've previously attended Texas Tech, which helped forge my desire to help others build a better looking, and better functioning future.  
+	</p>
+	<br>
+	<p> I've recently taken to learning Python through Code Academy as well as bolstering my abilities to design, format, and polish my visual web content.  I am also looking into various ways to integrate my love of drawing and creative nature to bring a unique feel to each piece of content I create.
+	</p>
+	<br>
+	<p> Please take some time and browse through the website, some of my recent projects, current résumé in PDF format, as well as my GitHub stream of recently active repositories are available for viewing.
+	<br>
+	<br>
+	Feel free to contact me if you have any questions!
 	</div>
+	<div id = "elondiv">
+	<p id = "elontext"> "Don't be afraid of new arenas"<br>-Elon Musk</p>
+	<img src = "css/img/elon.jpg" id = "elon" height = "300" width = "480">
 	</br>
 
 	<div id = "infobottom">
@@ -137,10 +153,10 @@
 		</script>
 		<script type="text/javascript">
 			(function(){
-				$.getJSON("https://api.github.com/users/AScottSanAntonio/repos?access_token=2e781130a709a107cc54991ff8eb1dc6545f1306", function(data) {
+				$.getJSON("https://api.github.com/users/AScottSanAntonio/repos?access_token=ee59d3bcb0319d7be8e25738e4c00ff7b3d6e23c", function(data) {
 				}).done(function(data) {
 					data.forEach(function(repository) {
-						$.getJSON("https://api.github.com/repos/AScottSanAntonio/" + repository.name + "/commits?access_token=2e781130a709a107cc54991ff8eb1dc6545f1306",
+						$.getJSON("https://api.github.com/repos/AScottSanAntonio/" + repository.name + "/commits?access_token=ee59d3bcb0319d7be8e25738e4c00ff7b3d6e23c",
 // replace with OAUTH BEFORE GITHUB
 function(commits) {
 	var commitsString = '<div role="tabpanel" class="tab-pane fade" id="repository-' + repository.id + '">';

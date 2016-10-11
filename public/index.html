@@ -88,12 +88,18 @@
 				articles3.articles.forEach(function(news3){
 					table += "<a class = 'btn btn-default' href = '" + news3.url + "'>" + news3.title + "</a>"
 				});
+				$('#news3').html(table);
+				
+				
 				$(document).ready(function() {
 					"use strict";
 					$( "#projects" ).click( function() {
 						$( "#exercisebox" ).slideToggle("slow");
 					});
-					
+					$(document).ready(function() {
+						$( "#btn2" ).click( function() {
+							$( "#background3" ).slideToggle("slow");
+						});
 						$('#webTicker1').webTicker({
 							duplicate:true
 						});
@@ -108,7 +114,7 @@
 						
 					});
 				});
-			
+			});
 		</script>
 		<script type="text/javascript">
 			(function(){

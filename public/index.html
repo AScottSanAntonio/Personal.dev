@@ -26,23 +26,7 @@
 		</ul>
 	</div>
 
-	<div id = "stories2">
-		<h1 id = "topheading">Top Stories:<br> News</h1>
-		<h2 id = "newsheading1" class = "btn btn-default"><a href="http://www.wsj.com/">Wall Street Journal</a></h2>
-		<ul id="webTicker4">
-			<li id = "news4"></li>
-		</ul>
-		<br>
-		<h2 id = "newsheading2" class = "btn btn-default"><a href="http://www.nytimes.com/">New York Times</a></h2>
-		<ul id="webTicker5">
-			<li id = "news5"></li>
-		</ul>
-		<br>
-		<h2 id = "newsheading3" class = "btn btn-default"><a href="http://time.com/">Time</a></h2>
-		<ul id="webTicker6">
-			<li id = "news6"></li>
-		</ul>
-	</div>
+	
 	<br>
 	<div id ="backgroundstage">
 		<div id="projects" class = "btn btn-default">Projects
@@ -58,24 +42,19 @@
 		</div>
 
 		<div class = "socialmedia">
-			<a href="https://www.facebook.com/profile.php?id=100010818873627" class = "btn btn-default">Facebook</a></li>
-
+			
 			<a href="https://www.linkedin.com/in/alexwscott1993?trk=hp-identity-name" class = "btn btn-default">Linkedin</a>
 
 			<a href = "https://github.com/AScottSanAntonio" class = "btn btn-default">GitHub</a>
 		</div>
 		<br>
 		<h1 id = "heading1">Welcome to the Wall</h1>
-		<div id="btn2" class = "btn btn-default">Information</button>
-		</div>
+		
 		<br>
-		<div id = "background3">
-			<a id ="resume" class = "btn btn-default" href="resume.html">Resume</a><br>
-		</div>
+		
 		<br>
 		<div id = "gitcontainer">
 			<h1 id = "githeading">GitHub Stream:</h1>
-			<h5 id = "githeading2">Source of API: <a href = "https://github.com/gavinv">GavinV's Github</a></h5>
 			<div class = "tabpanel" class="col-xs-6 container">
 				<div class = "github-stream">
 					<div class = "tab-content">
@@ -109,40 +88,12 @@
 				articles3.articles.forEach(function(news3){
 					table += "<a class = 'btn btn-default' href = '" + news3.url + "'>" + news3.title + "</a>"
 				});
-				$('#news3').html(table);
-				$.ajax("https://newsapi.org/v1/articles?source=the-wall-street-journal&apiKey=3228357fc3674d43945b6850a353599f").done(function(articles4) {
-					var table = "";
-					console.log(articles4.articles);
-					articles4.articles.forEach(function(news4){
-						table += "<a class = 'btn btn-default' href = '" + news4.url + "'>" + news4.title + "</a>"
-					});
-					$('#news4').html(table);
-				})
-				$.ajax("https://newsapi.org/v1/articles?source=the-new-york-times&apiKey=3228357fc3674d43945b6850a353599f").done(function(articles5) {
-					var table = "";
-					console.log(articles5.articles);
-					articles5.articles.forEach(function(news5){
-						table += "<a class = 'btn btn-default' href = '" + news5.url + "'>" + news5.title + "</a>"
-					});
-					$('#news5').html(table);
-				})
-				$.ajax("https://newsapi.org/v1/articles?source=time&apiKey=3228357fc3674d43945b6850a353599f").done(function(articles6) {
-					var table = "";
-					console.log(articles6.articles);
-					articles6.articles.forEach(function(news6){
-						table += "<a class = 'btn btn-default' href = '" + news6.url + "'>" + news6.title + "</a>"
-					});
-					$('#news6').html(table);
-				})
 				$(document).ready(function() {
 					"use strict";
 					$( "#projects" ).click( function() {
 						$( "#exercisebox" ).slideToggle("slow");
 					});
-					$(document).ready(function() {
-						$( "#btn2" ).click( function() {
-							$( "#background3" ).slideToggle("slow");
-						});
+					
 						$('#webTicker1').webTicker({
 							duplicate:true
 						});
@@ -154,19 +105,10 @@
 							duplicate:true
 
 						});
-						$('#webTicker4').webTicker({
-							duplicate:true
-						});
-						$('#webTicker5').webTicker({
-							duplicate:true
-
-						});
-						$('#webTicker6').webTicker({
-							duplicate:true
-						});
+						
 					});
 				});
-			});
+			
 		</script>
 		<script type="text/javascript">
 			(function(){

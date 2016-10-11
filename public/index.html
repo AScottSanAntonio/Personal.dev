@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+	<div id = "infobar">
+
+	</div>
+	<br>
+	<div id ="infosection">
+
+	</div>
+	</br>
+
+	<div id = "infobottom">
+
+	</div>
+	<br>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/index.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 </head>
 <body>
+<div id = "storyborder">
 	<div id = "stories">
 		<h1 id = "topheading">Top Stories: Entertainment</h1>
 		<h2 id = "newsheading1" class = "btn btn-default"><a href="http://www.polygon.com/">Polygon</a></h2>
@@ -25,11 +38,18 @@
 			<li id = "news3"></li>
 		</ul>
 	</div>
+</div>
 
 	
 	<br>
 	<div id ="backgroundstage">
 		<div id="projects" class = "btn btn-default">Projects
+			<div class = "socialmedia">
+
+				<a href="https://www.linkedin.com/in/alexwscott1993?trk=hp-identity-name" class = "btn btn-default">Linkedin</a>
+
+				<a href = "https://github.com/AScottSanAntonio" class = "btn btn-default">GitHub</a>
+			</div>
 		</div>
 		<div id ="exercisebox">
 			<a id = "project" class = "btn btn-default"href="testsimon.html">Simple Simon</a><br>
@@ -43,23 +63,20 @@
 			<a id = "project" class = "btn btn-default" href="https://questhub.tech/">Capstone Project: QuestHub</a><br>
 		</div>
 
-		<div class = "socialmedia">
-			
-			<a href="https://www.linkedin.com/in/alexwscott1993?trk=hp-identity-name" class = "btn btn-default">Linkedin</a>
-
-			<a href = "https://github.com/AScottSanAntonio" class = "btn btn-default">GitHub</a>
-		</div>
+		
 		<br>
 		
 		
 		
 		
 		<br>
-		<div id = "gitcontainer">
-			<h1 id = "githeading">GitHub Stream:</h1>
-			<div class = "tabpanel" class="col-xs-6 container">
-				<div class = "github-stream">
-					<div class = "tab-content">
+		<div class = "gitbackground">
+			<div id = "gitcontainer">
+				<h1 id = "githeading">GitHub Stream:</h1>
+				<div class = "tabpanel" class="col-xs-6 container">
+					<div class = "github-stream">
+						<div class = "tab-content">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -120,10 +137,10 @@
 		</script>
 		<script type="text/javascript">
 			(function(){
-				$.getJSON("https://api.github.com/users/AScottSanAntonio/repos?access_token=4de62f457bb8f0da5e7705db16f692a0ede35824", function(data) {
+				$.getJSON("https://api.github.com/users/AScottSanAntonio/repos?access_token=2e781130a709a107cc54991ff8eb1dc6545f1306", function(data) {
 				}).done(function(data) {
 					data.forEach(function(repository) {
-						$.getJSON("https://api.github.com/repos/AScottSanAntonio/" + repository.name + "/commits?access_token=4de62f457bb8f0da5e7705db16f692a0ede35824",
+						$.getJSON("https://api.github.com/repos/AScottSanAntonio/" + repository.name + "/commits?access_token=2e781130a709a107cc54991ff8eb1dc6545f1306",
 // replace with OAUTH BEFORE GITHUB
 function(commits) {
 	var commitsString = '<div role="tabpanel" class="tab-pane fade" id="repository-' + repository.id + '">';
